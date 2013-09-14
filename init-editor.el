@@ -1,6 +1,7 @@
 ;(global-hl-line-mode)
 (global-linum-mode t)
 (setq linum-format "%4d")
+(column-number-mode t)
 
 ;;; Store backups in a directory
 (setq backup-directory-alist
