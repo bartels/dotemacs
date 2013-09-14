@@ -32,4 +32,9 @@
 (setq-default undo-tree-history-directory-alist
       `(("." . ,(concat user-cachedir "undo" ))))
 
+;;; saner ediff defaults
+(setq ediff-diff-options "-w")
+(setq ediff-split-window-function 'split-window-horizontally)
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
 (provide 'init-editor)
