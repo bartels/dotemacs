@@ -4,7 +4,8 @@
 (setq projectile-git-command "find . type f -print0")
 (setq projectile-require-project-root nil)
 (setq projectile-enable-caching t)
-(setq projectile-cache-file "~/.cache/emacs/projectile.cache")
+(setq projectile-cache-file (concat user-cachedir "projectile.cache" ))
+(setq projectile-known-projects-file (concat user-cachedir "projectile-bookmarks.eld" ))
 (projectile-global-mode)
 
 (provide 'init-projectile)

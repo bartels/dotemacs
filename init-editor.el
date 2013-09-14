@@ -4,12 +4,13 @@
 
 ;;; Store backups in a directory
 (setq backup-directory-alist
-      `((".*" . ,"~/.cache/emacs/backup")))
+      `(("." . ,(concat user-cachedir "backups"))))
+
 (setq auto-save-file-name-transforms
-      `((".*" ,"~/.cache/emacs/auto-save" t)))
+      `((".*" ,(concat user-cachedir "auto-save") t)))
 
 (setq savehist-additional-variables '(search-ring regexp-search-ring))
-(setq savehist-file "~/.cache/emacs/savehist")
+(setq savehist-file (concat user-cachedir "savehist"))
 (savehist-mode 1)
 
 ;;; spaces/tabs
@@ -29,6 +30,6 @@
 (global-undo-tree-mode)
 (setq undo-tree-auto-save-history t)
 (setq-default undo-tree-history-directory-alist
-      `(("." . ,"~/.cache/emacs/undo")))
+      `(("." . ,(concat user-cachedir "undo" ))))
 
 (provide 'init-editor)

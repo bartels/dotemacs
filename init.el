@@ -4,6 +4,10 @@
 (toggle-scroll-bar -1)
 
 (add-to-list 'load-path user-emacs-directory)
+(defvar user-cachedir
+  (concat user-emacs-directory ".cache/")
+  "Top-level of directory to use for any cache files.")
+
 
 (setq custom-file "~/.emacs/custom.el")
 (unless (not (file-exists-p custom-file))
