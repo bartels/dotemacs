@@ -7,6 +7,7 @@
 ;(add-hook 'css-mode-hook 'set-newline-and-indent)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+(global-set-key (kbd "M-x") 'smex)
 
 (evil-leader/set-leader ",")
 (evil-leader/set-key
