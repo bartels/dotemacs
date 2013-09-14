@@ -13,5 +13,6 @@
 (require 'init-theme)
 (require 'init-editor)
 (require 'init-evil)
+(require 'init-projectile)
 (require 'init-ido)
 (require 'init-bindings)

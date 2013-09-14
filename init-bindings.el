@@ -14,7 +14,7 @@
   "w" 'kill-this-buffer
   "l" 'whitespace-mode
   "<SPC>" 'evil-ex-nohighlight
-  "f" 'ido-find-file
+  "f" 'projectile-find-file
   "b" 'ido-switch-buffer)
 
 ; make "kj" ESC

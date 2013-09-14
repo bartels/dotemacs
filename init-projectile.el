@@ -1,0 +1,10 @@
+(require-package 'projectile)
+(require 'projectile)
+(setq projectile-indexing-method 'alien)
+(setq projectile-git-command "find . type f -print0")
+(setq projectile-require-project-root nil)
+(setq projectile-enable-caching t)
+(setq projectile-cache-file "~/.cache/emacs/projectile.cache")
+(projectile-global-mode)
+
+(provide 'init-projectile)
