@@ -8,6 +8,7 @@
 ;(add-hook 'css-mode-hook 'set-newline-and-indent)
 
 (global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "<f6>") 'toggle-theme)
 
 ;;; evil key bindings
 (evil-leader/set-leader ",")
