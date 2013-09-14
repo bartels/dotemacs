@@ -10,6 +10,7 @@
   (load custom-file))
 
 (require 'init-packages)
+(require 'init-theme)
 (require 'init-editor)
 (require 'init-evil)
 (require 'init-ido)
