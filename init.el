@@ -17,6 +17,7 @@
 (require 'init-theme)
 (require 'init-editor)
 (require 'init-evil)
+(require 'init-auto-complete)
 (require 'init-projectile)
 (require 'init-ido)
 (require 'init-git)
