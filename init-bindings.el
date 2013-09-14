@@ -13,6 +13,8 @@
 (evil-leader/set-key
   "w" 'kill-this-buffer
   "l" 'whitespace-mode
+  "v" 'split-window-horizontally
+  "h" 'split-window-vertically
   "<SPC>" 'evil-ex-nohighlight
   "f" 'projectile-find-file
   "b" 'ido-switch-buffer)
