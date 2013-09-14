@@ -4,7 +4,8 @@
 
 (setq evil-search-module 'evil-search
       evil-move-cursor-back nil
-      evil-cross-lines t)
+      evil-cross-lines t
+      evil-default-cursor t)
 
 (require 'evil)
 (require 'evil-leader)
