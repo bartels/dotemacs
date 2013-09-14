@@ -26,4 +26,14 @@
 ;;; whitespace-mode shows whitespace chars
 (require 'whitespace)
 
+(require-package 'smartparens)
+(require 'smartparens-config)
+(smartparens-global-mode t)
+
+(require-package 'undo-tree)
+(global-undo-tree-mode)
+(setq undo-tree-auto-save-history t)
+(setq-default undo-tree-history-directory-alist
+      `(("." . ,"~/.cache/emacs/undo")))
+
 (provide 'init-editor)
