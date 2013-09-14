@@ -15,4 +15,5 @@
 (require 'init-evil)
 (require 'init-projectile)
 (require 'init-ido)
+(require 'init-git)
 (require 'init-bindings)
