@@ -8,6 +8,10 @@
 (setq projectile-cache-file (concat user-cachedir "projectile.cache" ))
 (setq projectile-known-projects-file (concat user-cachedir "projectile-bookmarks.eld" ))
 
+(setq projectile-globally-ignored-directories
+      (append projectile-globally-ignored-directories
+              '("tmp")))
+
 (after-load 'projectile
     (diminish 'projectile-mode))
 
