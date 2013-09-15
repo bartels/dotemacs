@@ -20,6 +20,10 @@
 (setq c-basic-offset 4)
 (setq c-basic-indent 4)
 
+;;; diminished modes support
+(require-package 'diminish)
+(require 'diminish)
+
 ;;; whitespace-mode shows whitespace chars
 (require 'whitespace)
 
@@ -27,11 +31,14 @@
 (require 'smartparens-config)
 (smartparens-global-mode t)
 
+;;; undo-tree
 (require-package 'undo-tree)
-(global-undo-tree-mode)
 (setq undo-tree-auto-save-history t)
 (setq-default undo-tree-history-directory-alist
       `(("." . ,(concat user-cachedir "undo" ))))
+(after-load 'undo-tree
+    (diminish 'undo-tree-mode))
+(global-undo-tree-mode)
 
 ;;; saner ediff defaults
 (setq ediff-diff-options "-w")

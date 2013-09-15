@@ -5,8 +5,7 @@
  magit-diff-refine-hunk t
  magit-completing-read-function 'magit-ido-completing-read)
 
-(eval-after-load 'magit
-  '(progn
+(after-load 'magit
     ;; Don't let magit-status mess up window configurations
     ;; http://whattheemacsd.com/setup-magit.el-01.html
     (defadvice magit-status (around magit-fullscreen activate)
@@ -22,6 +21,6 @@
         (ignore-errors
           (jump-to-register :magit-fullscreen))))
 
-    (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)))
+    (define-key magit-status-mode-map (kbd "q") 'magit-quit-session))
 
 (provide 'init-git)

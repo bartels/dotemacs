@@ -13,6 +13,7 @@
 (unless (not (file-exists-p custom-file))
   (load custom-file))
 
+(require 'init-utils)
 (require 'init-packages)
 (require 'init-theme)
 (require 'init-editor)
