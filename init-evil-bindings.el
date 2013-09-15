@@ -1,10 +1,11 @@
 (evil-leader/set-leader ",")
 (setq evil-leader/in-all-states t)
 (evil-leader/set-key
-  "w" 'kill-this-buffer
   "l" 'whitespace-mode
+  "w" 'kill-this-buffer
   "v" 'split-window-horizontally
   "s" 'split-window-vertically
+  "e" 'eval-region
   "h" 'help
   "<SPC>" 'evil-ex-nohighlight
   "f" 'projectile-find-file
