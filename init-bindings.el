@@ -9,6 +9,7 @@
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "<f6>") 'toggle-theme)
+(global-set-key (kbd "<f12>") 'magit-status)
 
 ;;; evil key bindings
 (if (boundp 'evil-mode)
