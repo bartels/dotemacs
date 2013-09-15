@@ -20,6 +20,9 @@
 (setq c-basic-offset 4)
 (setq c-basic-indent 4)
 
+;;; Frame title
+(setq frame-title-format "%b - emacs")
+
 ;;; diminished modes support
 (require-package 'diminish)
 (require 'diminish)
