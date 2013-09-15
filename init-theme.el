@@ -6,7 +6,7 @@
 (setq solarized-distinct-fringe-background t)
 (setq solarized-high-contrast-mode-line t)
 
-(defvar current-theme 'monokai)
+(defvar current-theme 'solarized-light)
 (load-theme current-theme t)
 
 (defun toggle-theme ()
