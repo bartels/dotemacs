@@ -10,7 +10,7 @@
 
 (setq projectile-globally-ignored-directories
       (append projectile-globally-ignored-directories
-              '("tmp")))
+              '("tmp" ".cache")))
 
 (after-load 'projectile
     (diminish 'projectile-mode))
