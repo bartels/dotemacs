@@ -1,4 +1,4 @@
-;(global-hl-line-mode)
+;;; line numbers
 (global-linum-mode t)
 (setq linum-format "%4d")
 (column-number-mode t)
@@ -19,6 +19,8 @@
 (setq-default tab-width 4)
 (setq c-basic-offset 4)
 (setq c-basic-indent 4)
+
+(setq-default fill-column 80)
 
 ;;; Frame title
 (setq frame-title-format "%b - emacs")
