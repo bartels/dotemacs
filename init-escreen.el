@@ -34,9 +34,17 @@
    ""))
 
 (defun escreen-show-active-screen-names ()
-  "Shows message tabbar containing escreen labels with active one highlighted"
+  "Shows message \"tabbar\" containing escreen labels with active one highlighted"
   (interactive)
   (message (escreen-active-screen-names)))
+
+(defun escreen-close-window-or-screen ()
+  "Closes escreen screen if there is only one window, otherwise deletes the
+current window."
+  (interactive)
+  (if (one-window-p)
+      (escreen-kill-screen)
+    (delete-window)))
 
 (add-hook 'escreen-goto-screen-hook 'escreen-show-active-screen-names)
 (define-key escreen-map "l" 'escreen-show-active-screen-names)

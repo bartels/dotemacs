@@ -11,7 +11,7 @@
 ;;; leader keys
 (evil-leader/set-key
   "l" 'whitespace-mode
-  "w" 'delete-window
+  "w" 'escreen-close-window-or-screen
   "v" 'split-window-horizontally
   "s" 'split-window-vertically
   "e" 'eval-buffer-or-region
