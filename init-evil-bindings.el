@@ -16,6 +16,7 @@
   "s" 'split-window-vertically
   "e" 'eval-buffer-or-region
   "h" 'help
+  "t" 'escreen-create-screen
   "<SPC>" 'evil-ex-nohighlight
   "f" 'projectile-find-file
   "b" 'ido-switch-buffer)
@@ -29,6 +30,8 @@
 (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
 (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+(define-key evil-normal-state-map (kbd "gt") 'escreen-goto-next-screen)
+(define-key evil-normal-state-map (kbd "gT") 'escreen-goto-prev-screen)
 
 ;;; evil insert state maps
 (define-key evil-insert-state-map (kbd "C-<return>") 'evil-open-below)

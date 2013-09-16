@@ -17,6 +17,7 @@
 (require 'init-packages)
 (require 'init-theme)
 (require 'init-editor)
+(require 'init-escreen)
 (require 'init-buffernav)
 (require 'init-evil)
 (require 'init-auto-complete)
