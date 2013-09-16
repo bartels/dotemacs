@@ -2,7 +2,7 @@
 (setq evil-leader/in-all-states t)
 (evil-leader/set-key
   "l" 'whitespace-mode
-  "w" 'kill-this-buffer
+  "w" 'delete-window
   "v" 'split-window-horizontally
   "s" 'split-window-vertically
   "e" 'eval-region

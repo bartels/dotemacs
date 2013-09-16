@@ -6,6 +6,9 @@
       ido-max-window-height 0.4
       ido-max-prospects 40)
 
+(setq ido-ignore-buffers
+    '("\\` " "^\*"))
+
 (require-package 'ido-ubiquitous)
 (ido-ubiquitous-mode t)
 

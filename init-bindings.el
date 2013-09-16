@@ -11,6 +11,10 @@
 (global-set-key (kbd "<f6>") 'toggle-theme)
 (global-set-key (kbd "<f12>") 'magit-status)
 
+(global-set-key (kbd "<C-tab>") 'my-next-buffer)
+(global-set-key (kbd "<C-prior>") 'my-previous-buffer)
+(global-set-key (kbd "<C-next>") 'my-next-buffer)
+
 ;;; evil key bindings
 (if (boundp 'evil-mode)
    (require 'init-evil-bindings))
