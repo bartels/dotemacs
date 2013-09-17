@@ -2,7 +2,7 @@
 (require 'projectile)
 
 (setq projectile-indexing-method 'alien)
-(setq projectile-git-command "find . type f -print0")
+(setq projectile-git-command "find . -type f \\( ! -name *.elc ! -name *.pyc \\) -print0")
 (setq projectile-require-project-root nil)
 (setq projectile-enable-caching t)
 (setq projectile-cache-file (concat user-cachedir "projectile.cache" ))
