@@ -1,5 +1,7 @@
 ;;; "kj" ESC
 (key-chord-mode 1)
+(setq key-chord-one-key-delay 0.3)
+(setq key-chord-two-keys-delay 0.2)
 (key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
 
 (defun eval-buffer-or-region ()
