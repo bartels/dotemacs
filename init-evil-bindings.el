@@ -1,5 +1,6 @@
-(evil-leader/set-leader ",")
-(setq evil-leader/in-all-states t)
+;;; "kj" ESC
+(key-chord-mode 1)
+(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
 
 (defun eval-buffer-or-region ()
   "If there is an active region, call eval-region, otherwise eval-buffer"
@@ -9,6 +10,9 @@
     (eval-buffer)))
 
 ;;; leader keys
+(evil-leader/set-leader ",")
+(setq evil-leader/in-all-states t)
+
 (evil-leader/set-key
   "l" 'whitespace-mode
   "w" 'escreen-close-window-or-screen
@@ -21,21 +25,19 @@
   "f" 'projectile-find-file
   "b" 'ido-switch-buffer)
 
-;;; "kj" ESC
-(key-chord-mode 1)
-(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
-
 ;;; evil normal state maps
-(define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
-(define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
-(define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
-(define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
-(define-key evil-normal-state-map (kbd "gt") 'escreen-goto-next-screen)
-(define-key evil-normal-state-map (kbd "gT") 'escreen-goto-prev-screen)
+(fill-keymap evil-normal-state-map
+  "C-h" 'evil-window-left
+  "C-j" 'evil-window-down
+  "C-k" 'evil-window-up
+  "C-l" 'evil-window-right
+  "gt" 'escreen-goto-next-screen
+  "gT" 'escreen-goto-prev-screen)
 
 ;;; evil insert state maps
-(define-key evil-insert-state-map (kbd "C-<return>") 'evil-open-below)
-(define-key evil-insert-state-map (kbd "C-S-<return>") 'evil-open-above)
+(fill-keymap evil-insert-state-map
+  "C-<return>" 'evil-open-below
+  "C-S-<return>" 'evil-open-above)
 
 ;;; hjkl bindings for magit modes
 (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs
