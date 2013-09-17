@@ -1,6 +1,6 @@
 ;;; line numbers
 (global-linum-mode t)
-(setq linum-format "%4d")
+(setq linum-format "%3d")
 (column-number-mode t)
 
 ;;; Store backups in a directory
