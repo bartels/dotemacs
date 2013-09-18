@@ -18,4 +18,12 @@
 ;(setq evil-motion-state-modes (append evil-emacs-state-modes evil-motion-state-modes))
 ;(setq evil-emacs-state-modes nil)
 
+(evil-define-command evil-tabedit (file &optional bang)
+  "Open FILE in a new escreen tab"
+  :repeat nil
+  (interactive "<f><!>")
+  (progn (escreen-create-screen)
+         (if file
+              (evil-edit file))))
+
 (provide 'init-evil)

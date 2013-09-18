@@ -51,4 +51,8 @@
   "l" 'magit-key-mode-popup-logging
   "h" 'magit-toggle-diff-refine-hunk)
 
+
+;;; custom ex bindings
+(evil-ex-define-cmd "tabe[dit]" 'evil-tabedit)
+
 (provide 'init-evil-bindings)
