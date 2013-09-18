@@ -3,6 +3,7 @@
 (require-package 'surround)
 
 (setq evil-search-module 'evil-search
+      evil-ex-search-case 'sensitive
       evil-move-cursor-back nil
       evil-cross-lines t
       evil-default-cursor t)
