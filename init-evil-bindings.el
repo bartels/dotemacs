@@ -11,6 +11,7 @@
 (evil-leader/set-key
   "l" 'whitespace-mode
   "w" 'escreen-close-window-or-screen
+  "k" 'evil-delete-buffer
   "v" 'split-window-horizontally
   "s" 'split-window-vertically
   "e" 'eval-buffer-or-region
@@ -18,7 +19,8 @@
   "t" 'escreen-create-screen
   "<SPC>" 'evil-ex-nohighlight
   "f" 'projectile-find-file
-  "b" 'ido-switch-buffer)
+  "b" 'ido-switch-buffer
+  "d" 'find-function-at-point)
 
 ;;; evil normal state maps
 (fill-keymap evil-normal-state-map
