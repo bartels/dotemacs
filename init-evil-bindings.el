@@ -22,16 +22,19 @@
   "b" 'ido-switch-buffer
   "d" 'find-function-at-point)
 
-;;; evil normal state maps
-(fill-keymap evil-normal-state-map
+;;; evil motion state
+(fill-keymap evil-motion-state-map
   "C-h" 'evil-window-left
   "C-j" 'evil-window-down
   "C-k" 'evil-window-up
-  "C-l" 'evil-window-right
+  "C-l" 'evil-window-right)
+
+;;; evil normal state
+(fill-keymap evil-normal-state-map
   "gt" 'escreen-goto-next-screen
   "gT" 'escreen-goto-prev-screen)
 
-;;; evil insert state maps
+;;; evil insert state
 (fill-keymap evil-insert-state-map
   "C-<return>" 'evil-open-below
   "C-S-<return>" 'evil-open-above)
