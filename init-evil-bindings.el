@@ -4,13 +4,6 @@
 (setq key-chord-two-keys-delay 0.2)
 (key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
 
-(defun eval-buffer-or-region ()
-  "If there is an active region, call eval-region, otherwise eval-buffer"
-  (interactive)
-  (if (region-active-p)
-      (eval-region (region-beginning) (region-end))
-    (eval-buffer)))
-
 ;;; leader keys
 (evil-leader/set-leader ",")
 (setq evil-leader/in-all-states t)
@@ -50,7 +43,6 @@
   "K" 'magit-discard-item
   "l" 'magit-key-mode-popup-logging
   "h" 'magit-toggle-diff-refine-hunk)
-
 
 ;;; custom ex bindings
 (evil-ex-define-cmd "tabe[dit]" 'evil-tabedit)

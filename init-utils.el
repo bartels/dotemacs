@@ -1,11 +1,13 @@
 ;; https://github.com/cofi/dotfiles/blob/master/emacs.d/config/cofi-func.el
 
+;;; feature loading
 (defmacro after-load (feature &rest body)
   "After FEATURE is loaded, evaluate BODY."
   (declare (indent defun))
   `(eval-after-load ,feature
      '(progn ,@body)))
 
+;;; keymap helpers
 (defun fill-keymap (keymap &rest mappings)
   "Fill `KEYMAP' with `MAPPINGS'.
 See `pour-mappings-to'."
@@ -50,6 +52,15 @@ A `spec' can be a `read-kbd-macro'-readable string or a vector."
                (string (read-kbd-macro spec))
                (t (error "wrong argument")))))
     (funcall setter-fun key cmd)))
+
+
+;;; eval helper
+(defun eval-buffer-or-region ()
+  "If there is an active region, call eval-region, otherwise eval-buffer"
+  (interactive)
+  (if (region-active-p)
+      (eval-region (region-beginning) (region-end))
+    (eval-buffer)))
 
 
 (provide 'init-utils)
