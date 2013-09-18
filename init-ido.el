@@ -3,7 +3,7 @@
 (setq ido-everywhere t
       ido-enable-flex-matching t
       ido-create-new-buffer 'always
-      ido-max-window-height 0.4
+      ido-max-window-height 0.5
       ido-max-prospects 40)
 
 (setq ido-ignore-buffers
