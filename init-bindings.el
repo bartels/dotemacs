@@ -8,6 +8,7 @@
 (fill-keymap global-map
   "RET" 'newline-and-indent
   "M-x" 'smex
+  "<f5>" 'undo-tree-visualize
   "<f6>" 'toggle-theme
   "<f12>" 'magit-status
   "<C-tab>" 'escreen-goto-next-screen

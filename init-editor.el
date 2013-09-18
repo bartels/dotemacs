@@ -39,7 +39,8 @@
 
 ;;; undo-tree
 (require-package 'undo-tree)
-(setq undo-tree-auto-save-history t)
+(setq undo-tree-auto-save-history t
+      undo-tree-visualizer-diff t)
 (setq-default undo-tree-history-directory-alist
       `(("." . ,(concat user-cachedir "undo" ))))
 (after-load 'undo-tree
