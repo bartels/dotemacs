@@ -43,12 +43,12 @@ deletes the current window."
    (lambda (item)
      (let* ((screen-num (car item))
             (screen-name (cdr item))
-            (label (format " %s: %s " screen-num screen-name)))
+            (label (format "%s: %s" screen-num screen-name)))
        (if (= escreen-current-screen-number screen-num)
            (propertize label 'face '('bold 'underline))
          (propertize label 'face '('default)))))
    (escreen-get-active-screen-names)
-   ""))
+   " "))
 
 (defun escreen-show-active-screen-names ()
   "Shows message \"tabbar\" containing escreen labels with active one highlighted"
