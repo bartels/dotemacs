@@ -20,10 +20,11 @@
 (setq c-basic-offset 4)
 (setq c-basic-indent 4)
 
+;;; column wrap
 (setq-default fill-column 80)
 
 ;;; Frame title
-(setq frame-title-format "%b - emacs")
+(setq frame-title-format "%b : %f - emacs")
 
 ;;; diminished modes support
 (require-package 'diminish)
