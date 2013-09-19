@@ -29,6 +29,14 @@
   "C-k" 'evil-window-up
   "C-l" 'evil-window-right)
 
+(add-hook 'ediff-keymap-setup-hook
+          '(lambda ()
+             (fill-keymap ediff-mode-map
+               "C-h" 'evil-window-left
+               "C-j" 'evil-window-down
+               "C-k" 'evil-window-up
+               "C-l" 'evil-window-right)))
+
 ;;; evil normal state
 (fill-keymap evil-normal-state-map
   "gt" 'escreen-goto-next-screen
@@ -51,5 +59,7 @@
 
 ;;; custom ex bindings
 (evil-ex-define-cmd "tabe[dit]" 'evil-tabedit)
+(evil-ex-define-cmd "diffthis" 'ediff-visible-windows)
+(evil-ex-define-cmd "diffwin[dows]" 'ediff-visible-windows)
 
 (provide 'init-evil-bindings)

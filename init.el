@@ -20,6 +20,7 @@
 (require 'init-escreen)
 (require 'init-buffernav)
 (require 'init-evil)
+(require 'init-ediff)
 (require 'init-auto-complete)
 (require 'init-projectile)
 (require 'init-ido)

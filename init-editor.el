@@ -3,7 +3,7 @@
 (setq linum-format "%3d")
 (column-number-mode t)
 
-;;; Store backups in a directory
+;;; Store backups, auto-save, history in a directory
 (setq backup-directory-alist
       `(("." . ,(concat user-cachedir "backups"))))
 
@@ -33,6 +33,7 @@
 ;;; whitespace-mode shows whitespace chars
 (require 'whitespace)
 
+;;; smartparens
 (require-package 'smartparens)
 (require 'smartparens-config)
 (smartparens-global-mode t)
@@ -47,9 +48,5 @@
     (diminish 'undo-tree-mode))
 (global-undo-tree-mode)
 
-;;; saner ediff defaults
-(setq ediff-diff-options "-w")
-(setq ediff-split-window-function 'split-window-horizontally)
-(setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
 (provide 'init-editor)
