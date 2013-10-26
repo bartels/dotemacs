@@ -23,6 +23,11 @@
 ;;; column wrap
 (setq-default fill-column 80)
 
+;;; scrolling
+(setq redisplay-dont-pause t
+      scroll-margin 3
+      scroll-step 1)
+
 ;;; Frame title
 (setq frame-title-format "%b : %f - emacs")
 
