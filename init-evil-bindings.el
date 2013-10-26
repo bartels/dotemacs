@@ -40,7 +40,8 @@
 ;;; evil normal state
 (fill-keymap evil-normal-state-map
   "gt" 'escreen-goto-next-screen
-  "gT" 'escreen-goto-prev-screen)
+  "gT" 'escreen-goto-prev-screen
+  "C-u" 'evil-scroll-up)
 
 ;;; evil insert state
 (fill-keymap evil-insert-state-map

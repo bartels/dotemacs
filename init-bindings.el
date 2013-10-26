@@ -14,8 +14,8 @@
   "<C-tab>" 'escreen-goto-next-screen
   "<C-prior>" 'escreen-goto-prev-screen
   "<C-next>" 'escreen-goto-prev-screen
-  "M-J" 'escreen-goto-next-screen
-  "M-K" 'escreen-goto-prev-screen)
+  "M-j" 'escreen-goto-next-screen
+  "M-k" 'escreen-goto-prev-screen)
 
 ;;; load evil key bindings
 (if (boundp 'evil-mode)
