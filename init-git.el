@@ -1,5 +1,7 @@
 (require-package 'magit)
+(require-package 'git-gutter-fringe)
 
+; maggit
 (setq-default
  magit-save-some-buffers nil
  magit-diff-refine-hunk t
@@ -22,5 +24,12 @@
           (jump-to-register :magit-fullscreen))))
 
     (define-key magit-status-mode-map (kbd "q") 'magit-quit-session))
+
+; git-gutter
+(require 'git-gutter-fringe)
+(after-load 'git-gutter-fringe
+    (diminish 'git-gutter-mode "GG"))
+(global-git-gutter-mode +1)
+
 
 (provide 'init-git)
