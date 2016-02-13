@@ -1,4 +1,4 @@
-(set-face-attribute 'default nil :font "DejaVu Sans Mono-10")
+(set-face-attribute 'default nil :font "DejaVu Sans Mono-9")
 
 (require-package 'solarized-theme)
 (require-package 'monokai-theme)
@@ -6,7 +6,7 @@
 (setq solarized-distinct-fringe-background t)
 (setq solarized-high-contrast-mode-line t)
 
-(defvar current-theme 'solarized-light)
+(defvar current-theme 'monokai)
 (load-theme current-theme t)
 
 (defun toggle-theme ()

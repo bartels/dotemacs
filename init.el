@@ -1,6 +1,7 @@
 (setq inhibit-splash-screen 1)
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
+;(menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (setq default-frame-alist '((width . 160) (height . 56)))
 
